@@ -1,11 +1,13 @@
 # create-solid-ssg
-This is my attempt to use [solid-start](https://start.solidjs.com) as a static site generator together with clouldflare pages [functions](https://developers.cloudflare.com/pages/functions/).
+This is my first attempt to use [solid-start](https://start.solidjs.com) as a static site generator together with clouldflare pages [functions](https://developers.cloudflare.com/pages/functions/).
+
+### https://create-solid-ssg.pages.dev/
 
 > [!TIP]
 > For SSR, use the `Solid` framework starter in `npm create cloudflare`.
 > This setup avoids the `cloudflare-pages` preset which generates a [`_worker.js`](https://developers.cloudflare.com/pages/functions/advanced-mode/) for SSR.
 
-## Steps to reproduce this repo
+### Steps to reproduce this repo
 - `pnpm create solid` say yes `SolidStart`, then choose `Basic`
 - `pnpm install wrangler`
 - add/modify files as below
