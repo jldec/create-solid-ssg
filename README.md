@@ -2,8 +2,8 @@
 This is my attempt to use [solid-start](https://start.solidjs.com) as a static site generator together with clouldflare pages [functions](https://developers.cloudflare.com/pages/functions/).
 
 > [!TIP]
-> For SSR, use the solidjs framework starters in `npm create cloudflare`.
-> This setup avoids the `cloudflare-pages` preset which generates `_workers.js` for SSR.
+> For SSR, use the `Solid` framework starter in `npm create cloudflare`.
+> This setup avoids the `cloudflare-pages` preset which generates a [`_worker.js`](https://developers.cloudflare.com/pages/functions/advanced-mode/) for SSR.
 
 ## Steps to reproduce this repo
 - `pnpm create solid` say yes `SolidStart`, then choose `Basic`
