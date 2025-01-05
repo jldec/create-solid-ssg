@@ -1,11 +1,11 @@
 # create-solid-ssg
-This an exercise in how to use [solidstart](https://start.solidjs.com) as a static site generator together with Clouldflare Pages [functions](https://developers.cloudflare.com/pages/functions/).
+This an exercise in using [solidstart](https://start.solidjs.com) as a static site generator together with Clouldflare Pages [functions](https://developers.cloudflare.com/pages/functions/).
 
 Deployed on Cloudflare Pages at https://create-solid-ssg.pages.dev/
 
 > [!TIP]
 > For SSR, use the `Solid` framework starter in `npm create cloudflare`.
-> This setup avoids the `cloudflare-pages` preset which generates a [`_worker.js`](https://developers.cloudflare.com/pages/functions/advanced-mode/) for SSR.
+> The setup in this repo avoids using the `cloudflare-pages` preset which generates a [`_worker.js`](https://developers.cloudflare.com/pages/functions/advanced-mode/) for SSR.
 
 ### Steps to reproduce this repo
 - `pnpm create solid` say yes `SolidStart`, then choose `Basic`
