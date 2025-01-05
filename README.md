@@ -8,7 +8,7 @@ Deployed on Cloudflare Pages at https://create-solid-ssg.pages.dev/
 > The setup in this repo avoids using the `cloudflare-pages` preset which generates a [`_worker.js`](https://developers.cloudflare.com/pages/functions/advanced-mode/) for SSR.
 
 ### Steps to reproduce this repo
-- `pnpm create solid` say yes `SolidStart`, then choose `Basic`
+- `pnpm create solid` say yes to `Is this a SolidStart project?`, then choose `Basic`
 - `pnpm install wrangler`
 - add/modify files as below
 
