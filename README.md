@@ -1,5 +1,5 @@
 # create-solid-ssg
-This is my first attempt to use [solid-start](https://start.solidjs.com) as a static site generator together with clouldflare pages [functions](https://developers.cloudflare.com/pages/functions/).
+This an exercise in how to use [solidstart](https://start.solidjs.com) as a static site generator together with Clouldflare Pages [functions](https://developers.cloudflare.com/pages/functions/).
 
 Deployed on Cloudflare Pages at https://create-solid-ssg.pages.dev/
 
