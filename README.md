@@ -17,7 +17,7 @@ Deployed on Cloudflare Pages at https://create-solid-ssg.pages.dev/
   "scripts": {
     "dev": "vinxi dev",
     "build": "vinxi build",
-    "preview": "pnpm run build && npx wrangler pages dev",
+    "preview": "pnpm run build && wrangler pages dev",
     "ship": "pnpm run build && wrangler pages deploy"
   },
 ```
