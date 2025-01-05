@@ -57,25 +57,31 @@ export function onRequest(context) {
 
 ### src/app.tsx
 ```tsx
-<Router
-  root={(props) => (
-    <MetaProvider>
-      <Title>SolidStart - Basic</Title>
-      <a href="/">Index</a>
-      <a href="/about">About</a>
+import { MetaProvider, Title } from '@solidjs/meta';
+import { Router } from '@solidjs/router';
+import { FileRoutes } from '@solidjs/start/router';
+import { Suspense } from 'solid-js';
+import './app.css';
 
-      // NOTE target="_self" avoids client-side navigation
-      // https://docs.solidjs.com/solid-router/reference/components/a#soft-navigation
-      <a href="/helloworld" target="_self">
-        helloworld function
-      </a>
-
-<Suspense>{props.children}</Suspense>
-    </MetaProvider>
-  )}
->
-  <FileRoutes />
-</Router>
+export default function App() {
+  return (
+    <Router
+      root={(props) => (
+        <MetaProvider>
+          <Title>SolidStart - Basic</Title>
+          <a href="/">Index</a>
+          <a href="/about">About</a>
+          <a href="/helloworld" target="_self">
+            helloworld function
+          </a>
+          <Suspense>{props.children}</Suspense>
+        </MetaProvider>
+      )}
+    >
+      <FileRoutes />
+    </Router>
+  );
+}
 ```
 
 ### original motivation
