@@ -3,11 +3,20 @@ This an exercise in using [solidstart](https://start.solidjs.com) as a static si
 
 Deployed on Cloudflare Pages at https://create-solid-ssg.pages.dev/
 
+## Usage
+Clone this repo and modify the project name in wrangler.toml and package.json.
+
+- `pnpm install`
+- `pnpm dev` to start the solidstart (vinxi) dev server
+- `pnpm build` to build the solidstart site (vinxi)
+- `pnpm preview` to preview the static site together with the function
+- `pnpm ship` to deploy the static site to Cloudflare Pages
+
 > [!TIP]
 > For SSR, use the `Solid` framework starter in `npm create cloudflare`.
 > The setup in this repo avoids using the `cloudflare-pages` preset which generates a [`_worker.js`](https://developers.cloudflare.com/pages/functions/advanced-mode/) for SSR.
 
-### Steps to reproduce this repo
+## To reproduce this repo from scratch
 - `pnpm create solid` say yes to `Is this a SolidStart project?`, then choose `Basic`
 - `pnpm install wrangler`
 - add/modify files as below
@@ -50,8 +59,12 @@ export default defineConfig({
 ### functions/helloworld.js
 ```js
 // https://developers.cloudflare.com/pages/functions/get-started/#create-a-function
+// https://developers.cloudflare.com/pages/functions/api-reference/#eventcontext
+// https://developers.cloudflare.com/workers/runtime-apis/request/#incomingrequestcfproperties
 export function onRequest(context) {
-  return new Response('Hello, world!');
+return new Response(`Hello from ${context.request.cf.city}!
+The date is ${new Date().toDateString()}
+The time is ${new Date().toLocaleTimeString()}`);
 }
 ```
 
