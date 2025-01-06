@@ -1,7 +1,8 @@
 # create-solid-ssg
-This an exercise in using [solidstart](https://start.solidjs.com) as a static site generator together with Clouldflare Pages [functions](https://developers.cloudflare.com/pages/functions/).
-
+Use [solidstart](https://start.solidjs.com) as a static site generator together with Clouldflare Pages [functions](https://developers.cloudflare.com/pages/functions/).  
 Deployed on Cloudflare Pages at https://create-solid-ssg.pages.dev/
+
+![Screenshot 2025-01-06 at 11 51 12](https://github.com/user-attachments/assets/40bf03d1-56cf-4e62-b839-cc2d702ab41d)
 
 ## Usage
 Clone this repo and modify the project name in wrangler.toml and package.json.
