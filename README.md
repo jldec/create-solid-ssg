@@ -14,8 +14,10 @@ Clone this repo and modify the project name in wrangler.toml and package.json.
 - `pnpm ship` to deploy the static site to Cloudflare Pages
 
 > [!TIP]
-> For SSR, use the `Solid` framework starter in `npm create cloudflare`.
-> The setup in this repo avoids using the `cloudflare-pages` preset which generates a [`_worker.js`](https://developers.cloudflare.com/pages/functions/advanced-mode/) for SSR.
+> This project uses SolidStart to generate a static site, and Clouldflare Pages [functions](https://developers.cloudflare.com/pages/functions/) for server-side logic.
+> 
+> For SolidStart SSR, use the `Solid` framework starter in `npm create cloudflare` which installs the `cloudflare-pages` preset  
+> and generates [`_worker.js`](https://developers.cloudflare.com/pages/functions/advanced-mode/).
 
 ## To reproduce this repo from scratch
 - `pnpm create solid` say yes to `Is this a SolidStart project?`, then choose `Basic`
