@@ -4,6 +4,11 @@ Deployed on Cloudflare Pages at https://create-solid-ssg.pages.dev/
 
 ![Screenshot 2025-01-06 at 11 51 12](https://github.com/user-attachments/assets/40bf03d1-56cf-4e62-b839-cc2d702ab41d)
 
+> [!NOTE]
+> Prerendered routes generate static files like `<route>/index.html`  
+> This causes Cloudflare Pages to redirect to `<route>/` with a trailing slash  
+> There is probably a way to force `<route>.html` instead, but I have not found it yet.
+
 ## Usage
 Clone this repo and modify the project name in wrangler.toml and package.json.
 
@@ -65,7 +70,7 @@ export default defineConfig({
 // https://developers.cloudflare.com/pages/functions/api-reference/#eventcontext
 // https://developers.cloudflare.com/workers/runtime-apis/request/#incomingrequestcfproperties
 export function onRequest(context) {
-return new Response(`Hello from ${context.request.cf.city}!
+return new Response(`Hello from ${context.request.cf.city || context.request.cf.country}!
 The date is ${new Date().toDateString()}
 The time is ${new Date().toLocaleTimeString()}`);
 }
